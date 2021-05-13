@@ -4,9 +4,21 @@
       <h2>プロフィールを編集</h2>
       <%= form_with model: @user, local:true do |f| %>
       <div class="form-group">
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.label :image %>
+        <%= f.attachment_field :profile_image, class: "form-control-file user_image" %>
       </div>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :introduction %>
+        <%= f.text_area :introduction, class: "" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit '保存', class: "btn btn-success" %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

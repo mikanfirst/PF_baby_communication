@@ -66,7 +66,6 @@ gem "jquery-rails"
 gem 'jquery-turbolinks'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'bootstrap', '~> 4.5'
-# gem "jp_prefecture"
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'kaminari'
