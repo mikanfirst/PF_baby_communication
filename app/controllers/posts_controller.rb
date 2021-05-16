@@ -13,11 +13,13 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path(@post)
     else
+      @posts = Post.all
       render :index
     end
   end
 
   def index
+    @posts = Post.all
   end
 
   def show
