@@ -8,6 +8,7 @@
       <%= post.body %>
     </div>
     <div>
-      <%= attachment_image_tag post.post_image
+      <%= attachment_image_tag(post, :image, :size "100x100") %>
     </div>
+  <% end %>
 </div>
