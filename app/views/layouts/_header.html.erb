@@ -9,8 +9,8 @@
         <ul class="navbar-nav mx-auto">
         <% if user_signed_in? %>
           <li class="nav-list"><%= link_to ' マイページ',user_path(current_user), class: 'nav-link text-light' %></li>
-          <li class="nav-list"><%= link_to ' 投稿一覧',posts_path, class: 'nav-link text-light' %></li>
-          <li class="nav-list"><%= link_to ' 新規投稿',new_post_path, class: 'nav-link text-light' %></li>
+          <li class="nav-list"><%= link_to ' 投稿一覧',articles_path, class: 'nav-link text-light' %></li>
+          <li class="nav-list"><%= link_to ' 新規投稿',new_article_path, class: 'nav-link text-light' %></li>
           <li class="nav-list"><%= link_to ' ログアウト',destroy_user_session_path,method: :delete, class: 'nav-link text-light' %></li>
         <% elsif admin_signed_in? %>
           <li class="nav-list"></li>

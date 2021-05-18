@@ -2,12 +2,12 @@
 
 one:
   user_id: 1
-  post_image: MyText
   body: MyText
   title: MyString
+  article_image_id: MyString
 
 two:
   user_id: 1
-  post_image: MyText
   body: MyText
   title: MyString
+  article_image_id: MyString
