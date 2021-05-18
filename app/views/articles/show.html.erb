@@ -1,5 +1,38 @@
 <div class="container">
-  <div class="row">
-    
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-2">
+          <%= attachment_image_tag @article.user, :profile_image, :fill, 60, 60, class: "mt-3 rounded-circle" %>
+        </div>
+        <div class="col-10">
+          <p class="card-title"><%= @article.user.name %></p>
+          <p class="card-title"><%= @article.title %></p>
+          <p class="card-text"><%= @article.body %></p>
+          <!---コメント(非同期)--->
+          <span><i></i><%= @article.post_comments.count %></span>
+          <!---いいね数(非同期)--->
+          <span><i></i><%= @article.favorite.count %></span>
+        </div>
+      </div>
+      <!--<hr>は水平方向の罫線、size,width,alignなどが指定できる-->
+      <hr>
+      <div class="comment card-text">
+        <h2 class="mt-3"><%= @article.post_comments.count%>件のコメント</h2>
+        <% @article.post_comments.each do |post_comment| %>
+          <!--bootstrapの[media]オブジェクト使用。media、media-bodyのclassが必要-->
+          <div class="media border mb-3">
+            <%= attachment_image_tag @article.user, :profile_image, :fill, 60, 60, class: "mt-3 rounded-circle" %>
+            <div class="media-body">
+              <p><%= post_comment.created_at.strftime('%Y/%m/%d') %></p>
+              <p><%= post_comment.comment %></p>
+              <% if post_comment.user == current_user %>
+                <%= link_to '削除', article_post_comment_path(post_comment.article, post_comment), method: :delete, class: "btn btn-danger pull-right" %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
