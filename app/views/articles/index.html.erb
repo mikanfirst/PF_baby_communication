@@ -2,14 +2,14 @@
   <h2>投稿一覧</h2>
   <% @articles.each do |article| %>
     <div class="card">
-      <div class="card">
-        <%= link_to article.title, article_path(article), class: "" %>
-      </div>
       <div class="card-body">
+        <%= link_to article.title, article_path(article), class: "" %>
+        <div class="">
         <%= article.body %>
-      </div>
-      <div class="">
-        <%= attachment_image_tag article, :article_image, :fill, 100, 100, format: 'jpeg' %>
+        </div>
+        <div class="">
+          <%= attachment_image_tag article, :article_image, :fill, 100, 100, format: 'jpeg' %>
+        </div>
       </div>
     </div>
   <% end %>

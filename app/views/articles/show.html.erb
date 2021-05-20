@@ -3,7 +3,18 @@
     <div class="card-body">
       <div class="row">
         <div class="col-2">
-          <%= attachment_image_tag @article.user, :profile_image, :fill, 60, 60, class: "mt-3 rounded-circle" %>
+          <p class="text-center">
+            <%= attachment_image_tag @article.user, :profile_image, :fill, 60, 60, class: "mt-3 rounded-circle" %>
+          </p>
+          <p class="text-center">
+            <% if current_user != @user %>
+              <% if current_user.following?(@user) %>
+                <%= link_to 'フォロー中', user_relationships_path(@user), method: :delete, class: "btn btn-success" %>
+              <% else %>
+                <%= link_to 'フォロー', user_relationships_path(@user), method: :post, class: "btn btn-primary" %>
+              <% end %>
+            <% end %>
+          </p>
         </div>
         <div class="col-10">
           <p class="card-title"><%= @article.user.name %></p>
@@ -36,7 +47,7 @@
         <% @article.post_comments.each do |post_comment| %>
           <!--bootstrapの[media]オブジェクト使用。media、media-bodyのclassが必要-->
           <div class="media border mb-3">
-            <%= attachment_image_tag @article.user, :profile_image, :fill, 60, 60, class: "mt-3 rounded-circle" %>
+            <%= attachment_image_tag(post_comment.user, :profile_image, :fill, 60, 60, class: "mt-3 rounded-circle") %>
             <div class="media-body">
               <p><%= post_comment.created_at.strftime('%Y/%m/%d') %></p>
               <p><%= post_comment.comment %></p>

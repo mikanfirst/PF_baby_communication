@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     @article = Article.find(params[:id])
     @post_comment = PostComment.new
   end
