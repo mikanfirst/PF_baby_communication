@@ -1,24 +1,37 @@
-# README
+# Baby Communication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+子育て情報共有サイト。
+子育て中の方同士のコミュニティ。育児中の悩みや、工夫、有益な情報共有の場としての簡易SNSサイト
 
-Things you may want to cover:
+### サイトテーマ
+これから子育てをする人、している人
 
-* Ruby version
+### テーマを選んだ理由
+現在２歳の子どもがおおり、これから２人目が生まれます。
+妊娠中の過ごし方、産後の育児に関しての情報サイトが少なかった。
+例えば、おすすめの離乳食/寝かしつけ方のコツ/などが分かると便利かと思いました。
+また、男性でも子どもの育て方など参考になるようなことを意見交換の場として使うことができるようなサイトが欲しかったからです。
 
-* System dependencies
+### ターゲットユーザ
+・妊娠中の女性
+・乳幼児期の子どもをお持ちの夫婦
+・子育て中の男性
 
-* Configuration
+### 主な利用シーン
+育児に関する情報が見られる。
+妊娠中の過ごし方/離乳食/寝かつけetc..
 
-* Database creation
 
-* Database initialization
+## 設計書
+後から追加します。
 
-* How to run the test suite
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1NVNhbOR_xZ99R_CFig6yuqTkD5OfVQ3K2LtqsJrrnOA/edit#gid=0
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
