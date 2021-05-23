@@ -5,13 +5,13 @@
 
   <%= form_with model: @user, url: user_session_path, local: true do |f| %>
     <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.label :名前 %><br />
+      <%= f.email_field :name, autofocus: true, autocomplete: "名前" %>
     </div>
 
     <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
+      <%= f.label :パスワード %><br />
+      <%= f.password_field :password, autocomplete: "自身のパスワード" %>
     </div>
 
     <% if devise_mapping.rememberable? %>
