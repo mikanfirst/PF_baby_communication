@@ -1,32 +1,34 @@
 <div class="container">
-  <div class="row">
-    <div>
+  <div class="row py-5 mx-auto text-center">
+    <div class="col-4">
       <%= link_to user_followings_path(@user) do %>
-        <%= image_tag "", size: "150x150", class: "rounded-circle" %>
+        <%= image_tag asset_path('follow.jpeg'), size: "200x200", class: "" %>
         <p>フォロー</p>
       <% end %>
     </div>
-    <div>
+    <div class="col-4">
       <%= link_to user_followers_path(@user) do %>
-        <%= image_tag "", size: "150x150", class: "rounded-circle" %>
+        <%= image_tag asset_path('follower.jpeg'), size: "200x200", class: "" %>
         <p>フォロワー</p>
       <% end %>
     </div>
-    <div>
+    <div class="col-4">
       <%= link_to articles_path do %>
-        <%= image_tag "", size: "150x150", class: "rounded-circle" %>
+        <%= image_tag asset_path('article.jpeg'), size: "200x200", class: "" %>
         <p>投稿</p>
       <% end %>
     </div>
-    <div>
+    <div class="col-4 pt-3">
+      <%= image_tag asset_path('admin.jpeg'), size: "200x200", class: "" %>
       <p>管理者おススメ記事</p>
     </div>
-    <div>
+    <div class="col-4 pt-3">
+      <%= image_tag asset_path('bookmark.jpeg'), size: "200x200", class: "" %>
       <p>ブックマーク</p>
     </div>
-    <div>
+    <div class="col-4 pt-3">
       <%= link_to edit_user_path(@user) do %>
-        <%= image_tag "", size: "150x150", class: "rounded-circle" %>
+        <%= image_tag asset_path('edit.jpeg'), size: "200x200", class: "" %>
         <p>プロフィール編集</p>
       <% end %>
     </div>
