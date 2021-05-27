@@ -6,7 +6,9 @@
           <%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "no_img.jpeg", size: "50x50", class: "rounded-circle") %>
         </div>
           <div class="col-3">
-            <%= user.name %>
+            <%= link_to user_path(user) do %>
+              <%= user.name %>
+            <% end %>
           </div>
           <div class="col-5"><%= user.introduction %></div>
           <div class="col-2">
