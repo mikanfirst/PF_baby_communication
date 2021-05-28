@@ -28,7 +28,10 @@ class ArticlesController < ApplicationController
     @post_comment = PostComment.new
   end
 
-  def edit
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path
   end
 
   def article_params
