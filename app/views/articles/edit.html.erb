@@ -3,6 +3,7 @@
     <p></p>
     <%= form_with model: @user, local:true do |f| %>
     <% end %>
+    <%= attachment_imagr_tag(user.name)
     <p></p>
     <p></p>
   </div>
