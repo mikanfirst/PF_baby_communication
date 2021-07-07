@@ -1,34 +1,20 @@
-  <div class="row py-5 mx-auto text-center">
-    <div class="col-4">
-      <%= link_to user_followings_path(user) do %>
-        <%= image_tag asset_path('follow.jpeg'), size: "160x190", class: "" %>
-        <p>フォロー</p>
-      <% end %>
+  <div class="row">
+    <div class="">
+      <h5><%= link_to 'フォロー', user_followings_path(user), class: "fas fa-handshake" %></h5>
     </div>
-    <div class="col-4">
-      <%= link_to user_followers_path(user) do %>
-        <%= image_tag asset_path('follower.jpeg'), size: "160x160", class: "" %>
-        <p>フォロワー</p>
-      <% end %>
+    <div class="">
+      <h5><%= link_to 'フォロワー', user_followers_path(user), class: "fas fa-hand-holding-heart" %></h5>
     </div>
-    <div class="col-4">
-      <%= link_to articles_path do %>
-        <%= image_tag asset_path('article.jpeg'), size: "160x160", class: "" %>
-        <p>投稿</p>
-      <% end %>
+    <div class="">
+      <h5><%= link_to '投稿', articles_path, class: "fas fa-file-alt" %></h5>
     </div>
-    <div class="col-4 pt-3">
-      <%= image_tag asset_path('admin.jpeg'), size: "160x160", class: "" %>
-      <p>ComingSoon</p>
+    <div class="">
+      <h5><%= link_to '管理者おススメ記事', class: "fas fa-book-reader" %></h5>
     </div>
-    <div class="col-4 pt-3">
-      <%= image_tag asset_path('bookmark.jpeg'), size: "160x160", class: "" %>
-      <p>ComingSoon</p>
+    <div class="">
+      <h5><%= link_to 'ブックマーク', class: "fas fa-bookmark" %></h5>
     </div>
-    <div class="col-4 pt-3">
-      <%= link_to edit_user_path(user) do %>
-        <%= image_tag asset_path('edit.jpeg'), size: "160x160", class: "" %>
-        <p>プロフィール編集</p>
-      <% end %>
+    <div class="">
+      <h5><%= link_to "プロフィール編集", edit_user_path(user), class: "fas fa-user-cog" %></h5>
     </div>
   </div>
