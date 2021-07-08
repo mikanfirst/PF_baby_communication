@@ -1,20 +1,12 @@
+<div class="container">
   <div class="row">
-    <div class="">
-      <h5><%= link_to 'フォロー', user_followings_path(user), class: "fas fa-handshake" %></h5>
-    </div>
-    <div class="">
-      <h5><%= link_to 'フォロワー', user_followers_path(user), class: "fas fa-hand-holding-heart" %></h5>
-    </div>
-    <div class="">
-      <h5><%= link_to '投稿', articles_path, class: "fas fa-file-alt" %></h5>
-    </div>
-    <div class="">
-      <h5><%= link_to '管理者おススメ記事', class: "fas fa-book-reader" %></h5>
-    </div>
-    <div class="">
-      <h5><%= link_to 'ブックマーク', class: "fas fa-bookmark" %></h5>
-    </div>
-    <div class="">
-      <h5><%= link_to "プロフィール編集", edit_user_path(user), class: "fas fa-user-cog" %></h5>
+    <div class="col-md-3 mt-3 bg-light d-none d-sm-block">
+      <p><%= link_to 'フォロー', user_followings_path(user), class: "fas fa-handshake text-dark", fill: "20x20" %></p>
+      <p><%= link_to 'フォロワー', user_followers_path(user), class: "fas fa-hand-holding-heart text-dark" %></p>
+      <p><%= link_to '投稿', articles_path, class: "fas fa-file-alt text-dark" %></p>
+      <!--<p><%= link_to '管理者おススメ記事', class: "fas fa-book-reader text-dark" %></p>-->
+      <!--<p><%= link_to 'ブックマーク', class: "fas fa-bookmar text-dark" %></p>-->
+      <p><%= link_to 'プロフィール編集', edit_user_path(user), class: "fas fa-user-cog text-dark" %></p>
     </div>
   </div>
+</div>
