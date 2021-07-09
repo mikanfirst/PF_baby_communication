@@ -1,12 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3 mt-3 bg-light d-none d-sm-block">
+    <div class="col-md-3 mt-3 border d-none d-sm-block">
       <p><%= link_to 'フォロー', user_followings_path(user), class: "fas fa-handshake text-dark", fill: "20x20" %></p>
       <p><%= link_to 'フォロワー', user_followers_path(user), class: "fas fa-hand-holding-heart text-dark" %></p>
       <p><%= link_to '投稿', articles_path, class: "fas fa-file-alt text-dark" %></p>
       <!--<p><%= link_to '管理者おススメ記事', class: "fas fa-book-reader text-dark" %></p>-->
       <!--<p><%= link_to 'ブックマーク', class: "fas fa-bookmar text-dark" %></p>-->
       <p><%= link_to 'プロフィール編集', edit_user_path(user), class: "fas fa-user-cog text-dark" %></p>
+    </div>
+    <div class="col-md-9 mt-3">
+      <h2 class="">自身の投稿</h2>
     </div>
   </div>
 </div>
