@@ -1,8 +1,12 @@
 <div class="container">
   <% if @user == current_user %>
     <div class="row">
-      <%= render 'mypage', user: @user %>
-
+      <div class="col-md-3 mt-3 border d-none d-sm-block">
+        <%= render 'mypage', user: @user %>
+      </div>
+      <div class="col-md-8 mt-3">
+        <%= render 'articles/myarticles', articles: @articles %>
+      </div>
     </div>
   <% else %>
     <div class="card my-2">
